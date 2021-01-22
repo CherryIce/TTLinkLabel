@@ -26,6 +26,13 @@
 		465E9C5D25A808B100057BA1 /* MLExpressionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E9C5025A808B100057BA1 /* MLExpressionManager.m */; };
 		465E9C5E25A808B100057BA1 /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E9C5125A808B100057BA1 /* MLLabel.m */; };
 		465E9C5F25A808B100057BA1 /* MLLabelLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E9C5325A808B100057BA1 /* MLLabelLayoutManager.m */; };
+		4675556525BAAF580030D5A6 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675556425BAAF580030D5A6 /* ImageModel.m */; };
+		4675556B25BAB03D0030D5A6 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675556A25BAB03D0030D5A6 /* CommentModel.m */; };
+		4675557125BAB17D0030D5A6 /* LikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675557025BAB17D0030D5A6 /* LikeModel.m */; };
+		468C101B25B577B800649CAC /* CircleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468C101825B577B800649CAC /* CircleTableViewCell.xib */; };
+		468C101C25B577B800649CAC /* CircleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 468C101A25B577B800649CAC /* CircleTableViewCell.m */; };
+		468C102225B57B9300649CAC /* CircleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 468C102125B57B9300649CAC /* CircleModel.m */; };
+		46B3CBEA25BACC51006C8650 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 46B3CBE925BACC51006C8650 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +92,18 @@
 		465E9C5325A808B100057BA1 /* MLLabelLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLabelLayoutManager.m; sourceTree = "<group>"; };
 		465E9C5425A808B100057BA1 /* MLLabelLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLabelLayoutManager.h; sourceTree = "<group>"; };
 		465E9C5525A808B100057BA1 /* MLLabel+Override.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MLLabel+Override.h"; sourceTree = "<group>"; };
+		4675556325BAAF580030D5A6 /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		4675556425BAAF580030D5A6 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		4675556925BAB03D0030D5A6 /* CommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		4675556A25BAB03D0030D5A6 /* CommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		4675556F25BAB17D0030D5A6 /* LikeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LikeModel.h; sourceTree = "<group>"; };
+		4675557025BAB17D0030D5A6 /* LikeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LikeModel.m; sourceTree = "<group>"; };
+		468C101825B577B800649CAC /* CircleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleTableViewCell.xib; sourceTree = "<group>"; };
+		468C101925B577B800649CAC /* CircleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTableViewCell.h; sourceTree = "<group>"; };
+		468C101A25B577B800649CAC /* CircleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTableViewCell.m; sourceTree = "<group>"; };
+		468C102025B57B9300649CAC /* CircleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleModel.h; sourceTree = "<group>"; };
+		468C102125B57B9300649CAC /* CircleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleModel.m; sourceTree = "<group>"; };
+		46B3CBE925BACC51006C8650 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +154,8 @@
 		465E9C0425A8089D00057BA1 /* TTLinkLabel */ = {
 			isa = PBXGroup;
 			children = (
+				46B3CBE925BACC51006C8650 /* data.json */,
+				4675556225BAAF100030D5A6 /* Models */,
 				465E9C3D25A808B100057BA1 /* Classes */,
 				465E9C0525A8089D00057BA1 /* AppDelegate.h */,
 				465E9C0625A8089D00057BA1 /* AppDelegate.m */,
@@ -142,6 +163,9 @@
 				465E9C0925A8089D00057BA1 /* SceneDelegate.m */,
 				465E9C0B25A8089D00057BA1 /* ViewController.h */,
 				465E9C0C25A8089D00057BA1 /* ViewController.m */,
+				468C101925B577B800649CAC /* CircleTableViewCell.h */,
+				468C101A25B577B800649CAC /* CircleTableViewCell.m */,
+				468C101825B577B800649CAC /* CircleTableViewCell.xib */,
 				465E9C0E25A8089D00057BA1 /* Main.storyboard */,
 				465E9C1125A8089F00057BA1 /* Assets.xcassets */,
 				465E9C1325A8089F00057BA1 /* LaunchScreen.storyboard */,
@@ -186,11 +210,11 @@
 		465E9C3F25A808B100057BA1 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				465E9C4425A808B100057BA1 /* NSMutableAttributedString+MLLabel.h */,
 				465E9C4025A808B100057BA1 /* NSMutableAttributedString+MLLabel.m */,
 				465E9C4125A808B100057BA1 /* NSString+MLLabel.h */,
-				465E9C4225A808B100057BA1 /* NSAttributedString+MLLabel.h */,
 				465E9C4325A808B100057BA1 /* NSString+MLLabel.m */,
-				465E9C4425A808B100057BA1 /* NSMutableAttributedString+MLLabel.h */,
+				465E9C4225A808B100057BA1 /* NSAttributedString+MLLabel.h */,
 				465E9C4525A808B100057BA1 /* NSAttributedString+MLLabel.m */,
 			);
 			path = Category;
@@ -219,6 +243,21 @@
 				465E9C5525A808B100057BA1 /* MLLabel+Override.h */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		4675556225BAAF100030D5A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				468C102025B57B9300649CAC /* CircleModel.h */,
+				468C102125B57B9300649CAC /* CircleModel.m */,
+				4675556325BAAF580030D5A6 /* ImageModel.h */,
+				4675556425BAAF580030D5A6 /* ImageModel.m */,
+				4675556925BAB03D0030D5A6 /* CommentModel.h */,
+				4675556A25BAB03D0030D5A6 /* CommentModel.m */,
+				4675556F25BAB17D0030D5A6 /* LikeModel.h */,
+				4675557025BAB17D0030D5A6 /* LikeModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,7 +363,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				465E9C1525A8089F00057BA1 /* LaunchScreen.storyboard in Resources */,
+				468C101B25B577B800649CAC /* CircleTableViewCell.xib in Resources */,
 				465E9C1225A8089F00057BA1 /* Assets.xcassets in Resources */,
+				46B3CBEA25BACC51006C8650 /* data.json in Resources */,
 				465E9C1025A8089D00057BA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +393,9 @@
 			files = (
 				465E9C0D25A8089D00057BA1 /* ViewController.m in Sources */,
 				465E9C5C25A808B100057BA1 /* NSString+MLExpression.m in Sources */,
+				468C101C25B577B800649CAC /* CircleTableViewCell.m in Sources */,
+				4675556B25BAB03D0030D5A6 /* CommentModel.m in Sources */,
+				4675556525BAAF580030D5A6 /* ImageModel.m in Sources */,
 				465E9C5825A808B100057BA1 /* NSAttributedString+MLLabel.m in Sources */,
 				465E9C5B25A808B100057BA1 /* MLTextAttachment.m in Sources */,
 				465E9C0725A8089D00057BA1 /* AppDelegate.m in Sources */,
@@ -360,9 +404,11 @@
 				465E9C5625A808B100057BA1 /* NSMutableAttributedString+MLLabel.m in Sources */,
 				465E9C5A25A808B100057BA1 /* NSAttributedString+MLExpression.m in Sources */,
 				465E9C5D25A808B100057BA1 /* MLExpressionManager.m in Sources */,
+				468C102225B57B9300649CAC /* CircleModel.m in Sources */,
 				465E9C0A25A8089D00057BA1 /* SceneDelegate.m in Sources */,
 				465E9C5725A808B100057BA1 /* NSString+MLLabel.m in Sources */,
 				465E9C5925A808B100057BA1 /* MLLinkLabel.m in Sources */,
+				4675557125BAB17D0030D5A6 /* LikeModel.m in Sources */,
 				465E9C5F25A808B100057BA1 /* MLLabelLayoutManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -522,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
