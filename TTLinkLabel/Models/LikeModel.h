@@ -11,8 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LikeModel : NSObject
 
-//点赞昵称 实际情况可能需要用户id判断自己有没有点赞 还有其他信息等等 这里只测试不管后台逻辑
+//点赞昵称
 @property (nonatomic , copy) NSString * userName;
+
+//用户id
+@property (nonatomic , assign) NSInteger userId;
 
 @end
 

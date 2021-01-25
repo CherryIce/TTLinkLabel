@@ -33,6 +33,10 @@
 		468C101C25B577B800649CAC /* CircleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 468C101A25B577B800649CAC /* CircleTableViewCell.m */; };
 		468C102225B57B9300649CAC /* CircleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 468C102125B57B9300649CAC /* CircleModel.m */; };
 		46B3CBEA25BACC51006C8650 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 46B3CBE925BACC51006C8650 /* data.json */; };
+		46D137FE25BE6D55008D5984 /* ImgCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46D137FB25BE6D55008D5984 /* ImgCollectionViewCell.xib */; };
+		46D137FF25BE6D55008D5984 /* ImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D137FD25BE6D55008D5984 /* ImgCollectionViewCell.m */; };
+		46F7851025BEB1F000ABE7AB /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F7850E25BEB1F000ABE7AB /* CommentTableViewCell.m */; };
+		46F7851125BEB1F000ABE7AB /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F7850F25BEB1F000ABE7AB /* CommentTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,12 @@
 		468C102025B57B9300649CAC /* CircleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleModel.h; sourceTree = "<group>"; };
 		468C102125B57B9300649CAC /* CircleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleModel.m; sourceTree = "<group>"; };
 		46B3CBE925BACC51006C8650 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		46D137FB25BE6D55008D5984 /* ImgCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImgCollectionViewCell.xib; sourceTree = "<group>"; };
+		46D137FC25BE6D55008D5984 /* ImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImgCollectionViewCell.h; sourceTree = "<group>"; };
+		46D137FD25BE6D55008D5984 /* ImgCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImgCollectionViewCell.m; sourceTree = "<group>"; };
+		46F7850D25BEB1EF00ABE7AB /* CommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		46F7850E25BEB1F000ABE7AB /* CommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		46F7850F25BEB1F000ABE7AB /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				46B3CBE925BACC51006C8650 /* data.json */,
+				466542AB25BE6BD5009647C2 /* Cells */,
 				4675556225BAAF100030D5A6 /* Models */,
 				465E9C3D25A808B100057BA1 /* Classes */,
 				465E9C0525A8089D00057BA1 /* AppDelegate.h */,
@@ -163,9 +174,6 @@
 				465E9C0925A8089D00057BA1 /* SceneDelegate.m */,
 				465E9C0B25A8089D00057BA1 /* ViewController.h */,
 				465E9C0C25A8089D00057BA1 /* ViewController.m */,
-				468C101925B577B800649CAC /* CircleTableViewCell.h */,
-				468C101A25B577B800649CAC /* CircleTableViewCell.m */,
-				468C101825B577B800649CAC /* CircleTableViewCell.xib */,
 				465E9C0E25A8089D00057BA1 /* Main.storyboard */,
 				465E9C1125A8089F00057BA1 /* Assets.xcassets */,
 				465E9C1325A8089F00057BA1 /* LaunchScreen.storyboard */,
@@ -223,14 +231,14 @@
 		465E9C4825A808B100057BA1 /* Expression */ = {
 			isa = PBXGroup;
 			children = (
-				465E9C4925A808B100057BA1 /* NSString+MLExpression.h */,
-				465E9C4A25A808B100057BA1 /* NSAttributedString+MLExpression.m */,
-				465E9C4B25A808B100057BA1 /* MLTextAttachment.m */,
 				465E9C4C25A808B100057BA1 /* MLExpressionManager.h */,
-				465E9C4D25A808B100057BA1 /* NSAttributedString+MLExpression.h */,
-				465E9C4E25A808B100057BA1 /* NSString+MLExpression.m */,
-				465E9C4F25A808B100057BA1 /* MLTextAttachment.h */,
 				465E9C5025A808B100057BA1 /* MLExpressionManager.m */,
+				465E9C4D25A808B100057BA1 /* NSAttributedString+MLExpression.h */,
+				465E9C4A25A808B100057BA1 /* NSAttributedString+MLExpression.m */,
+				465E9C4F25A808B100057BA1 /* MLTextAttachment.h */,
+				465E9C4B25A808B100057BA1 /* MLTextAttachment.m */,
+				465E9C4925A808B100057BA1 /* NSString+MLExpression.h */,
+				465E9C4E25A808B100057BA1 /* NSString+MLExpression.m */,
 			);
 			path = Expression;
 			sourceTree = "<group>";
@@ -243,6 +251,22 @@
 				465E9C5525A808B100057BA1 /* MLLabel+Override.h */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		466542AB25BE6BD5009647C2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				46D137FC25BE6D55008D5984 /* ImgCollectionViewCell.h */,
+				46D137FD25BE6D55008D5984 /* ImgCollectionViewCell.m */,
+				46D137FB25BE6D55008D5984 /* ImgCollectionViewCell.xib */,
+				468C101925B577B800649CAC /* CircleTableViewCell.h */,
+				468C101A25B577B800649CAC /* CircleTableViewCell.m */,
+				468C101825B577B800649CAC /* CircleTableViewCell.xib */,
+				46F7850D25BEB1EF00ABE7AB /* CommentTableViewCell.h */,
+				46F7850E25BEB1F000ABE7AB /* CommentTableViewCell.m */,
+				46F7850F25BEB1F000ABE7AB /* CommentTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4675556225BAAF100030D5A6 /* Models */ = {
@@ -362,9 +386,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D137FE25BE6D55008D5984 /* ImgCollectionViewCell.xib in Resources */,
 				465E9C1525A8089F00057BA1 /* LaunchScreen.storyboard in Resources */,
 				468C101B25B577B800649CAC /* CircleTableViewCell.xib in Resources */,
 				465E9C1225A8089F00057BA1 /* Assets.xcassets in Resources */,
+				46F7851125BEB1F000ABE7AB /* CommentTableViewCell.xib in Resources */,
 				46B3CBEA25BACC51006C8650 /* data.json in Resources */,
 				465E9C1025A8089D00057BA1 /* Main.storyboard in Resources */,
 			);
@@ -397,9 +423,11 @@
 				4675556B25BAB03D0030D5A6 /* CommentModel.m in Sources */,
 				4675556525BAAF580030D5A6 /* ImageModel.m in Sources */,
 				465E9C5825A808B100057BA1 /* NSAttributedString+MLLabel.m in Sources */,
+				46D137FF25BE6D55008D5984 /* ImgCollectionViewCell.m in Sources */,
 				465E9C5B25A808B100057BA1 /* MLTextAttachment.m in Sources */,
 				465E9C0725A8089D00057BA1 /* AppDelegate.m in Sources */,
 				465E9C1825A8089F00057BA1 /* main.m in Sources */,
+				46F7851025BEB1F000ABE7AB /* CommentTableViewCell.m in Sources */,
 				465E9C5E25A808B100057BA1 /* MLLabel.m in Sources */,
 				465E9C5625A808B100057BA1 /* NSMutableAttributedString+MLLabel.m in Sources */,
 				465E9C5A25A808B100057BA1 /* NSAttributedString+MLExpression.m in Sources */,

@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/zhudongwen/Desktop/TTLinkLabel/TTLinkLabel/Cells/ImgCollectionViewCell.h">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/zhudongwen/Desktop/TTLinkLabel/TTLinkLabel/Cells/ImgCollectionViewCell.m">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/zhudongwen/Desktop/TTLinkLabel/TTLinkLabel/Cells/ImgCollectionViewCell.xib">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

@@ -11,16 +11,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, CircleCellClickType) {
+    CircleCellClickText = 0,//点击文本内容
+    CircleCellClickLoction,//点击定位
+    CircleCellClickUserName//点击点赞人名
+};
+
 @protocol CircleTableViewCellDelegate <NSObject>
 
 @optional
 - (void) deleteCurrentCircle:(CircleModel *)model;
 
-- (void) commentCurrentCircle:(CircleModel *)model;
+- (void) commentCurrentCircle:(CircleModel *)model extraData:(id)extraData;
 
 - (void) likeCurrentCircle:(CircleModel *)model;
 
-- (void)didClickLink:(MLLink*)link linkText:(NSString*)linkText linkLabel:(MLLinkLabel*)linkLabel;
+- (void) didClickLink:(MLLink*)link linkText:(NSString*)linkText clickType:(CircleCellClickType)clickType;
+
+- (void) didClickImageItem:(NSInteger)index imageViews:(NSArray *)imageViews;
 
 @end
 

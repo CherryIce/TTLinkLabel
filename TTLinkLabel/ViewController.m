@@ -7,7 +7,6 @@
 
 #import "ViewController.h"
 #import "CircleTableViewCell.h"
-//#import "MLLinkLabel.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,CircleTableViewCellDelegate>
 
@@ -15,78 +14,14 @@
 
 @property (nonatomic , strong) NSMutableArray * dataArray;
 
-//@property (nonatomic , strong) MLLinkLabel * linkLabel;
-//
-//@property (nonatomic , strong) UIButton * moreBtn;
-
 @end
 
 @implementation ViewController
 
-//- (MLLinkLabel *)linkLabel {
-//    if (!_linkLabel) {
-//        _linkLabel = [[MLLinkLabel alloc] initWithFrame:CGRectMake(15.0, 100.0, CGRectGetWidth(self.view.frame)-30.0, 0)];
-//        _linkLabel.font = [UIFont systemFontOfSize:16];
-//        _linkLabel.numberOfLines = 0;
-//        _linkLabel.lineSpacing = 10;
-//        [self.view addSubview:_linkLabel];
-//    }
-//    return _linkLabel;
-//}
-//
-//- (UIButton *)moreBtn {
-//    if (!_moreBtn) {
-//        _moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        _moreBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-//        [_moreBtn setTitleColor:kDefaultLinkColorForMLLinkLabel forState:UIControlStateNormal];
-//        [_moreBtn addTarget:self action:@selector(moreBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-//        [self.view addSubview:_moreBtn];
-//    }
-//    return _moreBtn;
-//}
-
-//- (void) moreBtnClick:(UIButton *) sender {
-//    if ([sender.titleLabel.text isEqualToString:@"全文"]) {
-//        [self updateUI:YES];
-//    }else if([sender.titleLabel.text isEqualToString:@"收起"]){
-//        [self updateUI:NO];
-//    }
-//}
-//
-//#pragma mark - 按钮做法
-//- (void) updateUI:(BOOL)isOpening {
-//    // 明月几时有？把酒问青天。http://google.com?login=2006 明月几时有？把酒问青天。
-//    NSString *text = @"明月几时有？把酒问青天。www.google.com?login=2021, 不知天上宫阙，今夕是何年。13612341234,我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间？转朱阁，低绮户，照无眠。不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全。但愿人长久，千里共婵娟。";
-//    self.linkLabel.text = text;
-//    [self.linkLabel sizeToFit];
-//    CGRect frame = self.linkLabel.frame;
-//    if (self.linkLabel.frame.size.height > 90) {
-//        self.moreBtn.hidden = NO;
-//        if (isOpening) {
-//            [self.moreBtn setTitle:@"收起" forState:UIControlStateNormal];
-//            [self.linkLabel sizeToFit];
-//        }else{
-//            frame.size.height  = 90;
-//            self.linkLabel.frame = frame;
-//            [self.moreBtn setTitle:@"全文" forState:UIControlStateNormal];
-//        }
-//        self.moreBtn.frame = CGRectMake(CGRectGetMinX(self.linkLabel.frame), CGRectGetMaxY(frame) + 10, 0, 0);
-//        [self.moreBtn sizeToFit];
-//    }else{
-//        self.moreBtn.hidden = YES;
-//        self.moreBtn.frame = CGRectZero;
-//    }
-//    [self.linkLabel setDidClickLinkBlock:^(MLLink *link, NSString *linkText, MLLinkLabel *label) {
-//        NSLog(@"%ld  %@  %@", link.linkType, linkText, link.linkValue);
-//    }];
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    NSLocalizedStringFromTable(<#key#>, <#tbl#>, <#comment#>)
-    //增加按钮的做法
-    //[self updateUI:NO];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -123,18 +58,21 @@
         for (NSDictionary * like in likeArr) {
             LikeModel * lk = [LikeModel new];
             lk.userName = [like valueForKey:@"userName"];
-            [likes addObject:like];
+            lk.userId = [[like valueForKey:@"userId"] integerValue];
+            [likes addObject:lk];
         }
         model.likes = likes;
         
-        NSArray * commentArr = [dic valueForKey:@"likes"];
+        NSArray * commentArr = [dic valueForKey:@"comments"];
         NSMutableArray * comments = [NSMutableArray array];
         for (NSDictionary * comment in commentArr) {
             CommentModel * cm = [CommentModel new];
             cm.replyName = [comment valueForKey:@"replyName"];
             cm.byReplyName = [comment valueForKey:@"byReplyName"];
             cm.content = [comment valueForKey:@"content"];
-            [likes addObject:cm];
+            cm.replyUserId = [[comment valueForKey:@"replyUserId"] integerValue];
+            cm.byReplyUserId = [[comment valueForKey:@"byReplyUserId"] integerValue];
+            [comments addObject:cm];
         }
         model.comments = comments;
         
@@ -217,13 +155,33 @@
     NSLog(@"点赞/取消点赞");
 }
 
-- (void)commentCurrentCircle:(CircleModel *)model {
+- (void)commentCurrentCircle:(CircleModel *)model extraData:(nonnull id)extraData {
+    /**
+     这里extraData 传过来的是被自己评论的用户id
+     实际情况按实际处理
+     */
     NSLog(@"有爱评论 说点好听的");
 }
 
-- (void)didClickLink:(MLLink *)link linkText:(NSString *)linkText linkLabel:(id)linkLabel {
+- (void)didClickLink:(MLLink *)link linkText:(NSString *)linkText clickType:(CircleCellClickType)clickType{
     NSLog(@"%ld  %@  %@", link.linkType, linkText, link.linkValue);
-    //对应相应类型做操作
+    switch (clickType) {
+        case CircleCellClickText:{
+            //对应相应类型做操作
+        }break;
+        case CircleCellClickLoction:{
+            //跳转地理位置详情
+        }break;
+        case CircleCellClickUserName:{
+            // link.linkValue即userid 跳转个人详情页
+        }break;
+        default:
+            break;
+    }
+}
+
+- (void)didClickImageItem:(NSInteger)index imageViews:(NSArray *)imageViews {
+    NSLog(@"%ld  %@  %@", index, imageViews[index], imageViews);
 }
 
 #pragma mark - getter

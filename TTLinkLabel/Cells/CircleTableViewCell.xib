@@ -49,9 +49,25 @@
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUW-Qv-MWE">
                         <rect key="frame" x="72" y="229" width="231" height="114.5"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VsT-Mt-Chk">
+                                <rect key="frame" x="0.0" y="0.0" width="231" height="114.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hhn-Vj-BEC">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="VsT-Mt-Chk" firstAttribute="leading" secondItem="FUW-Qv-MWE" secondAttribute="leading" id="55i-Vq-fsx"/>
+                            <constraint firstAttribute="trailing" secondItem="VsT-Mt-Chk" secondAttribute="trailing" id="Bce-c1-bvz"/>
+                            <constraint firstAttribute="bottom" secondItem="VsT-Mt-Chk" secondAttribute="bottom" id="Mxu-mc-m98"/>
                             <constraint firstAttribute="height" constant="114.5" id="V2n-zq-WF3"/>
+                            <constraint firstItem="VsT-Mt-Chk" firstAttribute="top" secondItem="FUW-Qv-MWE" secondAttribute="top" id="psA-Ej-KKY"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cy-SL-LP7">
@@ -181,6 +197,7 @@
                 <outlet property="commentView" destination="sKI-gu-R1o" id="5as-Ey-9jT"/>
                 <outlet property="deleteBtn" destination="DGg-Y5-9CF" id="3X9-Rf-AV4"/>
                 <outlet property="headIcon" destination="EIq-bv-bqI" id="ZV8-4t-5Ah"/>
+                <outlet property="imgCollectionView" destination="VsT-Mt-Chk" id="n57-9Q-lD0"/>
                 <outlet property="imgContentView" destination="FUW-Qv-MWE" id="RQj-et-0Fh"/>
                 <outlet property="imgVH" destination="V2n-zq-WF3" id="o8Q-s5-KmS"/>
                 <outlet property="linkH" destination="OUG-Gr-Phd" id="Via-cX-6Bk"/>
@@ -192,13 +209,10 @@
                 <outlet property="timeLabel" destination="fQN-Yt-c7F" id="iVL-at-I8k"/>
                 <outlet property="userNameLabel" destination="KkA-cF-Zqu" id="Wzj-Sx-LSB"/>
             </connections>
-            <point key="canvasLocation" x="123.91304347826087" y="159.375"/>
+            <point key="canvasLocation" x="-290" y="145"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CircleModel : NSObject
 
+//发朋友圈人的用户id
+@property (nonatomic , assign) NSInteger userId;
+
 //头像
 @property (nonatomic , copy) NSString * icon;
 
@@ -53,6 +56,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 //图片显示区域高度
 @property (nonatomic , assign) CGFloat imagesH;
+
+//每张图片的显示宽度
+@property (nonatomic , assign) CGFloat imageW;
 
 //评论数组显示区域高度
 @property (nonatomic , assign) CGFloat commentH;
