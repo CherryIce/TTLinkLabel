@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		465E9C0725A8089D00057BA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E9C0625A8089D00057BA1 /* AppDelegate.m */; };
-		465E9C0A25A8089D00057BA1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E9C0925A8089D00057BA1 /* SceneDelegate.m */; };
 		465E9C0D25A8089D00057BA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E9C0C25A8089D00057BA1 /* ViewController.m */; };
 		465E9C1025A8089D00057BA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 465E9C0E25A8089D00057BA1 /* Main.storyboard */; };
 		465E9C1225A8089F00057BA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465E9C1125A8089F00057BA1 /* Assets.xcassets */; };
@@ -26,6 +25,7 @@
 		465E9C5D25A808B100057BA1 /* MLExpressionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E9C5025A808B100057BA1 /* MLExpressionManager.m */; };
 		465E9C5E25A808B100057BA1 /* MLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E9C5125A808B100057BA1 /* MLLabel.m */; };
 		465E9C5F25A808B100057BA1 /* MLLabelLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 465E9C5325A808B100057BA1 /* MLLabelLayoutManager.m */; };
+		4672F88225BFAC29003D3F71 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4672F88125BFAC29003D3F71 /* MainViewController.m */; };
 		4675556525BAAF580030D5A6 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675556425BAAF580030D5A6 /* ImageModel.m */; };
 		4675556B25BAB03D0030D5A6 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675556A25BAB03D0030D5A6 /* CommentModel.m */; };
 		4675557125BAB17D0030D5A6 /* LikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4675557025BAB17D0030D5A6 /* LikeModel.m */; };
@@ -60,8 +60,6 @@
 		465E9C0225A8089D00057BA1 /* TTLinkLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTLinkLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		465E9C0525A8089D00057BA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		465E9C0625A8089D00057BA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		465E9C0825A8089D00057BA1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		465E9C0925A8089D00057BA1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		465E9C0B25A8089D00057BA1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		465E9C0C25A8089D00057BA1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		465E9C0F25A8089D00057BA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +94,8 @@
 		465E9C5325A808B100057BA1 /* MLLabelLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLabelLayoutManager.m; sourceTree = "<group>"; };
 		465E9C5425A808B100057BA1 /* MLLabelLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLabelLayoutManager.h; sourceTree = "<group>"; };
 		465E9C5525A808B100057BA1 /* MLLabel+Override.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MLLabel+Override.h"; sourceTree = "<group>"; };
+		4672F88025BFAC29003D3F71 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4672F88125BFAC29003D3F71 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		4675556325BAAF580030D5A6 /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		4675556425BAAF580030D5A6 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		4675556925BAB03D0030D5A6 /* CommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
@@ -170,10 +170,10 @@
 				465E9C3D25A808B100057BA1 /* Classes */,
 				465E9C0525A8089D00057BA1 /* AppDelegate.h */,
 				465E9C0625A8089D00057BA1 /* AppDelegate.m */,
-				465E9C0825A8089D00057BA1 /* SceneDelegate.h */,
-				465E9C0925A8089D00057BA1 /* SceneDelegate.m */,
 				465E9C0B25A8089D00057BA1 /* ViewController.h */,
 				465E9C0C25A8089D00057BA1 /* ViewController.m */,
+				4672F88025BFAC29003D3F71 /* MainViewController.h */,
+				4672F88125BFAC29003D3F71 /* MainViewController.m */,
 				465E9C0E25A8089D00057BA1 /* Main.storyboard */,
 				465E9C1125A8089F00057BA1 /* Assets.xcassets */,
 				465E9C1325A8089F00057BA1 /* LaunchScreen.storyboard */,
@@ -421,6 +421,7 @@
 				465E9C5C25A808B100057BA1 /* NSString+MLExpression.m in Sources */,
 				468C101C25B577B800649CAC /* CircleTableViewCell.m in Sources */,
 				4675556B25BAB03D0030D5A6 /* CommentModel.m in Sources */,
+				4672F88225BFAC29003D3F71 /* MainViewController.m in Sources */,
 				4675556525BAAF580030D5A6 /* ImageModel.m in Sources */,
 				465E9C5825A808B100057BA1 /* NSAttributedString+MLLabel.m in Sources */,
 				46D137FF25BE6D55008D5984 /* ImgCollectionViewCell.m in Sources */,
@@ -433,7 +434,6 @@
 				465E9C5A25A808B100057BA1 /* NSAttributedString+MLExpression.m in Sources */,
 				465E9C5D25A808B100057BA1 /* MLExpressionManager.m in Sources */,
 				468C102225B57B9300649CAC /* CircleModel.m in Sources */,
-				465E9C0A25A8089D00057BA1 /* SceneDelegate.m in Sources */,
 				465E9C5725A808B100057BA1 /* NSString+MLLabel.m in Sources */,
 				465E9C5925A808B100057BA1 /* MLLinkLabel.m in Sources */,
 				4675557125BAB17D0030D5A6 /* LikeModel.m in Sources */,

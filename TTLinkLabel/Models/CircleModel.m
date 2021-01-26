@@ -2,7 +2,7 @@
 //  CircleModel.m
 //  TTLinkLabel
 //
-//  Created by Mr.Zhu on 18/01/2021.
+//  Created by hubin on 18/01/2021.
 //
 
 #import "CircleModel.h"

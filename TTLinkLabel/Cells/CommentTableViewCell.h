@@ -2,7 +2,7 @@
 //  CommentTableViewCell.h
 //  TTLinkLabel
 //
-//  Created by Mr.Zhu on 25/01/2021.
+//  Created by hubin on 25/01/2021.
 //
 
 #import <UIKit/UIKit.h>

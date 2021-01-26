@@ -2,8 +2,11 @@
 //  CircleTableViewCell.h
 //  TTLinkLabel
 //
-//  Created by Mr.Zhu on 18/01/2021.
+//  Created by hubin on 18/01/2021.
 //
+/**
+ 这里仅仅只是图文的 实际上应该还有视频 链接等等
+ */
 
 #import <UIKit/UIKit.h>
 #import "MLLinkLabel.h"

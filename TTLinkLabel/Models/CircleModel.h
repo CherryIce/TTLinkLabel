@@ -2,7 +2,7 @@
 //  CircleModel.h
 //  TTLinkLabel
 //
-//  Created by Mr.Zhu on 18/01/2021.
+//  Created by hubin on 18/01/2021.
 //
 
 #import <Foundation/Foundation.h>
@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 //名字
 @property (nonatomic , copy) NSString * name;
+
+//类型
+@property (nonatomic , copy) NSString * type;
 
 //文本
 @property (nonatomic , copy) NSString * text;

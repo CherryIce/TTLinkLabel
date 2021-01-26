@@ -2,7 +2,7 @@
 //  ViewController.m
 //  TTLinkLabel
 //
-//  Created by Mr.Zhu on 08/01/2021.
+//  Created by hubin on 08/01/2021.
 //
 
 #import "ViewController.h"
@@ -10,7 +10,7 @@
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,CircleTableViewCellDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic , strong) UITableView *tableView;
 
 @property (nonatomic , strong) NSMutableArray * dataArray;
 
@@ -22,10 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CircleTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CircleTableViewCell class])];
+    self.title = @"图文";
     [self loadData];
 }
 
@@ -190,6 +187,18 @@
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tableFooterView = [UIView new];
+        [self.view addSubview:_tableView];
+        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CircleTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CircleTableViewCell class])];
+    }
+    return _tableView;
 }
 
 @end

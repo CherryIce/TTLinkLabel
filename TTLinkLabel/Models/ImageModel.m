@@ -2,7 +2,7 @@
 //  ImageModel.m
 //  TTLinkLabel
 //
-//  Created by Mr.Zhu on 22/01/2021.
+//  Created by hubin on 22/01/2021.
 //
 
 #import "ImageModel.h"
